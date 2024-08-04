@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8; /* Light background color for the whole page */
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff; /* Background color for the container */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333; /* Title color */
+}
+
+.calculator {
+    background-color: #000000; /* Black background color for the calculator */
+    padding: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.display {
+    padding: 10px;
+    background-color: #333333; /* Dark background for the display */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    background-color: #333333; /* Dark background for the display */
+    color: #ffffff; /* White text color */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #000000; /* Black background for the buttons area */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #ffffff; /* White text color for buttons */
+}
+
+.btn:hover {
+    background-color: #333333; /* Darker grey on hover */
+}
+
+.btn:active {
+    background-color: #000000; /* Black background on active */
+}
+
+.btn:nth-child(1),
+.btn:nth-child(2),
+.btn:nth-child(3),
+.btn:nth-child(4) {
+    background-color: #ffab91; /* Accent color for specific buttons */
+    color: white;
+}
+
+.btn:nth-child(1):hover,
+.btn:nth-child(2):hover,
+.btn:nth-child(3):hover,
+.btn:nth-child(4):hover {
+    background-color: #ff8a65;
+}
+
+.btn:nth-child(1):active,
+.btn:nth-child(2):active,
+.btn:nth-child(3):active,
+.btn:nth-child(4):active {
+    background-color: #ff7043;
+}
+
+.equal {
+    grid-column: span 2;
+    background-color: #42a5f5;
+    color: white;
+}
+
+.equal:hover {
+    background-color: #1e88e5;
+}
+
+.equal:active {
+    background-color: #1976d2;
+}
+
+.btn:not(.equal):not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+    background-color: #cfd8dc; /* Light grey for other buttons */
+    color: #333333; /* Darker text color */
+}
